@@ -1,4 +1,4 @@
-package cst280graphproject;
+package graph;
 
 import java.util.LinkedList;
 import java.util.ListIterator;

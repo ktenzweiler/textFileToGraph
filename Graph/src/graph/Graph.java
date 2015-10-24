@@ -1,4 +1,4 @@
-package cst280graphproject;
+package graph;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,7 +24,7 @@ import java.util.Scanner;
  * ///////////////////////////////////////////////////////////////////////////
  * 4.Outputs information about the graph using the format defined in the slides
  */
-public class Cst280GraphProject {
+public class Graph {
 
     //indices for the vertex_id and the outDegree values in the lineArray
     private static final int VERTEX_ID_INDEX = 0;
@@ -137,4 +137,4 @@ public class Cst280GraphProject {
         }//end for{}
 
     }//end Main
-}//end Cst280GraphProject
+}//end Graph
