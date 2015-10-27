@@ -35,7 +35,7 @@ public class Graph {
      This value represents the first vertex that is connected via directed edge*/
     private static final int EDGE_INDEX = 2;
 
-    private static final double RANK = 1.00;//HW instruction 3.
+    private static final double RANK = 1.00;//HW instruction #3.
 
     private static final String FILE_NAME = "graph.txt";
     private static final File GRAPH_FILE = new File(FILE_NAME);
