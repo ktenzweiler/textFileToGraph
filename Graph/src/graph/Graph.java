@@ -39,29 +39,27 @@ public class Graph {
 
     private static final String FILE_NAME = "graph.txt";
     private static final File GRAPH_FILE = new File(FILE_NAME);
+    private static Vertex[] vertexArray = new Vertex[200];
+    private static Vertex vertex;
+    private static AdjacencyList adjList;
+    private static int destinationVertex, vertex_id, outDegree;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
 
-        //the destinationVertex is an integer that represents the vertex the
-        //edge is connecting to. The vertex_id is the vertex id that 
-        //corresponds to the vertexArray index. The outDegree corresponds to
-        //the number of out-bound edges from the vertex
-        int destinationVertex, vertex_id, outDegree;
+        
+        initializeVertexArray();
 
-        String line;//holds each line from the .txt file
-        String[] lineArray;//holds the values from line after line is split 
+        readGraphFromTextFile();
 
-        //adjList belongs to each vertex and holds the vertex_id's that the 
-        //vertex connects to
-        AdjacencyList adjList;
+        //try to open the graph.txt file, read it, and display the graph in
+        //the correct format displayed in slide 10
+    }//end Main
 
-        Vertex vertex;//holds a Vertex to store in the vertexArray
+    private static void initializeVertexArray() {
 
-        //initialize the vertexArray with vertices that have -1 as an index id
-        Vertex[] vertexArray = new Vertex[200];
         for (int i = 0; i < vertexArray.length; i++) {
 
             /*when a Vertex is created w/out any parameters, the index_id
@@ -70,8 +68,21 @@ public class Graph {
             vertexArray[i] = new Vertex();
         }
 
-        //try to open the graph.txt file, read it, and display the graph in
-        //the correct format
+    }//end of initializeVertexArray()
+
+    private static void readGraphFromTextFile() {
+        
+        //the destinationVertex is an integer that represents the vertex the
+        //edge is connecting to. The vertex_id is the vertex id that 
+        //corresponds to the vertexArray index. The outDegree corresponds to
+        //the number of out-bound edges from the vertex
+        //an adjList belongs to each vertex and holds the vertex_id's that the 
+        //vertex connects to with a directed edge
+        //holds a Vertex to store in the vertexArray
+        
+        
+        String line;//holds each line from the .txt file
+        String[] lineArray;//holds the values from line after line is split() 
         try {
             //Open the graph.txt file and scan it with a Scanner Object
             Scanner scan = new Scanner(GRAPH_FILE);
@@ -128,7 +139,8 @@ public class Graph {
 
         /*
          Traverse through vertexArray and if the vertex_id != -1, then
-         print the output info        
+         print the output info. The only way the vertex_id could be equal
+         -1 is if there is not a vertex corresponding to that index
          */
         for (Vertex vert : vertexArray) {
             if (vert.vertex_id != -1) {
@@ -136,5 +148,6 @@ public class Graph {
             }
         }//end for{}
 
-    }//end Main
+    }//end of readGraphFromTextFile()
+    
 }//end Graph

@@ -33,8 +33,8 @@ class Vertex {
     */
     Vertex(int id, int outDeg, double rank, AdjacencyList adjList) {
 
-        vertex_id = id;
-        outDegree = outDeg;
+        this.vertex_id = id;
+        this.outDegree = outDeg;
         this.rank = rank;
         this.adjList = adjList;
 
