@@ -49,7 +49,6 @@ public class Graph {
      */
     public static void main(String[] args) {
 
-        
         initializeVertexArray();
 
         readGraphFromTextFile();
@@ -71,7 +70,7 @@ public class Graph {
     }//end of initializeVertexArray()
 
     private static void readGraphFromTextFile() {
-        
+
         //the destinationVertex is an integer that represents the vertex the
         //edge is connecting to. The vertex_id is the vertex id that 
         //corresponds to the vertexArray index. The outDegree corresponds to
@@ -79,8 +78,6 @@ public class Graph {
         //an adjList belongs to each vertex and holds the vertex_id's that the 
         //vertex connects to with a directed edge
         //holds a Vertex to store in the vertexArray
-        
-        
         String line;//holds each line from the .txt file
         String[] lineArray;//holds the values from line after line is split() 
         try {
@@ -149,5 +146,5 @@ public class Graph {
         }//end for{}
 
     }//end of readGraphFromTextFile()
-    
+
 }//end Graph

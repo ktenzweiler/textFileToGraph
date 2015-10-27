@@ -19,14 +19,14 @@ class AdjacencyList extends LinkedList<Integer> {
 
         //add the destination vertex to the list
         this.add(destinationVertex);
-        
+
     }//end setEdge()
 
     /*
      This method returns a String that with the vertices to which it connects
      */
     public String print() {
-        
+
         ListIterator iter = this.listIterator();
         StringBuilder strBuilder = new StringBuilder();
 
@@ -35,12 +35,12 @@ class AdjacencyList extends LinkedList<Integer> {
             //Iterate through the list and turn each value into a String. 
             strBuilder.append(iter.next().toString());
             strBuilder.append(" ");//append each value to strBuilder 
-                                    //separated by a " "
+            //separated by a " "
         }
 
         //return a String representation of the vertices connected by an edge
         return strBuilder.toString();
-        
+
     }//end print()
-    
+
 }//end AdjacencyList.Class
